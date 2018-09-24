@@ -18,21 +18,19 @@ public class A1Q1 {
     public static void main(String[] args) {
         // TODO code application logic here
     
-System.out.println("please eneter two integers on seperate lines to run calclations ");
+System.out.println("please enter two integers on seperate lines to run calclations ");
 Scanner input = new Scanner (System.in);
-String users1Number = input.nextLine();
-String users2Number = input.nextLine();
+int users1Number = input.nextInt();
+int users2Number = input.nextInt();
 
-double 
-int birthYear = 2018 - usersAge;
+ 
+int sum = users1Number + users2Number;
+System.out.println("The sum of " + users1Number + "+" + users2Number + " is " + sum);
+  
+int product = users1Number * users2Number;
+System.out.println("The product of " + users1Number + "x" + users2Number + " is " + product);
 
-System.out.println("The sum of " + users1Number + users2Number);
-
-System.out.println( users1Number );    
-
-
-
-//System.out.println("5/2 is " + ans);
+        
     
     
     }
