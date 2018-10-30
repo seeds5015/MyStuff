@@ -55,7 +55,7 @@ public class PigLatinTransltor {
         char letter = word.charAt(i);
         if(letter == 'a' || letter =='i' ||letter == 'u' || letter == 'o' || letter == 'e' )
                 // move all letters before vowel to the end
-            String front =word.substring(0,i);
+            String front = word.substring(0,i);
     String back =word.substring(i);
     String newWord = back + front;
                 //also  add a ay to the end 
