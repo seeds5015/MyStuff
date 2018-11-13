@@ -17,36 +17,21 @@ public class A2Q1 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-   
-    
-    System.out.println("Please enter an integer");
-    Scanner input = new Scanner (System.in);
-    int users1 = input.nextInt();
-    System.out.println("Please enter another integer");
-    int users2 = input.nextInt();
-    
-    if(users1>users2){
-     System.out.println("your biggest number is " + users1);
-        
-  }else if (users2 > users1){
-  System.out.println("your biggest number is " + users2);
-  
-  
-  
-  }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+        System.out.println("Please enter an integer");
+        Scanner input = new Scanner(System.in);
+        //create and integer 
+        int users1 = input.nextInt();
+        System.out.println("Please enter another integer");
+        int users2 = input.nextInt();
+// state the condistions 
+        if (users1 > users2) {
+            System.out.println("your biggest number is " + users1);
+// have you else statment state the other possible conditions 
+        } else if (users2 > users1) {
+            System.out.println("your biggest number is " + users2);
+
+        }
+
     }
 }
