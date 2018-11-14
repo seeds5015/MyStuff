@@ -45,10 +45,10 @@ public class Project {
     
         
         
-        for (int i = 1 ; i <= 20; i++)
-            System.out.println("");
-        String word1 = (word.contains(a));
-        Str
+        for(int i =0; i <word.length(); i++){
+            
+        }+
+        
         
         
         
