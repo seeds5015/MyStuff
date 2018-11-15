@@ -23,7 +23,7 @@ public class Project {
     Scanner input = new Scanner (System.in);
     //get player one to put a word in
         System.out.println("Player one, Please enter a word for player two to guess.");
-    String word = input.nextLine();
+    String playersword = input.nextLine();
     
         System.out.println("");
         System.out.println("");
@@ -47,7 +47,7 @@ public class Project {
         
         for(int i =0; i <word.length(); i++){
             
-        }+
+        }
         
         
         

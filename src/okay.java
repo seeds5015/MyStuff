@@ -20,32 +20,28 @@ public class okay {
         // TODO code application logic here
    
     Scanner input = new Scanner (System.in);
-    
-    String[] wordss = {"writer", "that", "program"};
-    
-    System.out.println("Player one, Please enter a word for player two to guess.");
-    String word = input.nextLine();
-    
-    Strings char[] enteredLetters = new char [word[wordss].length()];
-    
-    
-    
-    
-    int triesCount = 0;
-    boolean wordguessed = false;
-    do
-    { switch(enterLetter(word[wordss],enteredLetters))
-    
-       case 0 : triesCount ++;
-            break;
-        case 1: 
-            triesCount ++;
-            break;
-        case 2: 
-        wordguessed = true;
-            break;
-    }
-    }while (! wordguessed);
-        System.out.println("The word is" + word[wordss]);
+    System.out.println("Let's play HANGMAN");
+   int gamecount=0;
+   
+        System.out.println("Player one, Please enter a word for player two to guess");
+   String word =input.nextLine() ;
+   String blank="";
+   
+   for (int i = 0; i < word.length(); i++){
+       blank +="_";
+       
+   }String misses= "";
+        System.out.println("word: "+ blank);
+        System.out.println("misses: "+ misses);
+        
+        while(misses.length()<=6){
+            System.out.println("Guss a letter: ");
+            String l1 = input.nextLine();
+            boolean missedGuessed = hasLetter(misses, l1. upperCase());
+            boolean letterAlreadyGuessed = hasLetter(blank, l1.toupperCase());
+        }
+   
+   
+        }
     
 }
