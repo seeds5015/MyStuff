@@ -21,24 +21,48 @@ public class okay {
    
     Scanner input = new Scanner (System.in);
     System.out.println("Let's play HANGMAN");
-   int gamecount=0;
+   int correct = 0;
+   // keeps trak of letters
+   char [] letters = new char [word.length()];
+    
+    int gamecount=0;
+   int lives = 6;
+   
    
         System.out.println("Player one, Please enter a word for player two to guess");
    String word =input.nextLine() ;
+   // the blank spot
    String blank="";
+   
+   
    
    for (int i = 0; i < word.length(); i++){
        blank +="_";
        
+       
+       
    }String misses= "";
         System.out.println("word: "+ blank);
         System.out.println("misses: "+ misses);
+        System.out.println("+-------+");
+        System.out.println("|       |");
+        System.out.println("        |");
+        System.out.println("        |");
+        System.out.println("        |");
+        System.out.println("        |");
+        System.out.println("=========");
         
-        while(misses.length()<=6){
+        if (word.char(blank){
             System.out.println("Guss a letter: ");
             String l1 = input.nextLine();
-            boolean missedGuessed = hasLetter(misses, l1. upperCase());
-            boolean letterAlreadyGuessed = hasLetter(blank, l1.toupperCase());
+        
+    }if (word.contains){
+            for (int i = 0; i < word.length(); i++){   
+            if (word.charAt(i)== blank) {
+                letters[i] = blank;
+                
+                        correct ++;
+            }
         }
    
    
