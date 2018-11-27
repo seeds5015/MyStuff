@@ -102,7 +102,8 @@ public class okay {
    
     char[] letters = new char[word.length()];
    for (int i = 0; i < letters.length; i++){
-       letters [i] ='_';    
+       letters [i] ='_'; 
+       
    }
     System.out.println("");
         System.out.println("");
@@ -262,4 +263,5 @@ if(word.contains(G)){
    
         }
     
-}
+
+
