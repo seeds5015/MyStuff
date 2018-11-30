@@ -22,28 +22,36 @@ public class A5Q2 {
  Scanner input = new Scanner(System.in);
         System.out.println("please enter the number of integers you will be ordering");      
 int [] number = new int [input.nextInt()];
- System.out.println("Please enter a positive integer");
-        
-  number [0]= input.nextInt();
+     
+ 
+ for (int i = 0; i< number.length; i++) {
+            System.out.println("Please enter a positive integer ");
+            number[i] = input.nextInt();
+ 
+ 
+ } 
+  //keep track of the higest number and lowest
         int high = number[0];
         int low = number[0];
 
 
-        while (number[0] != -1) {
-            System.out.println("Please enter a positive integer ");
-            number[0] = input.nextInt();
+        for (int i = 0; i< number.length; i++) {
+            System.out.println(" ");
+            
 
          //make an if statment
-            if (number[0] < low && number[0] != -1) {
-                low = number[0];
+            if (number[i] < low && number[i] != -1) {
+                low = number[i];
+                
             }
-            if (number[0] > high) {
-                high = number[0];
+            if (number[i] > high) {
+                high = number[i];
+                
             }
         //state the final answer
         }
-        System.out.print("The lowest number was " + low);
-        System.out.println("the highest number was " + high);
+        System.out.print(" The lowest number was " + low);
+        System.out.println(" the highest number was " + high);
 
 
 
@@ -153,4 +161,4 @@ int [] number = new int [input.nextInt()];
     
     }
     
-}
+
