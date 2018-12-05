@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import javax.swing.JComponent;
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Rectangle;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -74,13 +75,14 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
     //control variables for ball
     int ballx =1;
     int bally =1;
-    int ballSpeed = 4;
+    int ballSpeed = 7;
     
-            
+   //score         
+    int score1 =0;
+    int score2 = 0;
     
-    
-    
-    
+    //font
+    Font scoreFont = new Font("arial",Font.BOLD, 36);
     
     
     
@@ -118,7 +120,8 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
 
         // Set things up for the game at startup
         preSetup();
-
+        
+        
         // Start the game loop
         gameTimer = new Timer(desiredTime, this);
         gameTimer.setRepeats(true);
@@ -169,7 +172,10 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
 //draw the ball
         g.fillOval(ball.x, ball.y, ball.width, ball.height);
 
-        
+ //draw the score
+ g.setFont(scoreFont);
+ g.drawString("" + score1,WIDTH/4,50);
+ g.drawString("" + score2,3*WIDTH/4,50);
         
         
         
@@ -197,8 +203,12 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
     // This is run before the game loop begins!
     public void preSetup() {
         // Any of your pre setup before the loop starts should go here
-
-    }
+  }
+    
+    public void resetBall(){
+            ball.x = WIDTH/2 -10;
+            ball.y = WIDTH/2 -10;
+        }
 
     // The main game loop
     // In here is where all the logic for my game will go
@@ -206,7 +216,7 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
         
         //move ball
         ball.x =ball.x + ballx*ballSpeed;
-        ball.y =ball.y + bally*ballSpeed;
+        ball.y =ball.y + bally*ballSpeed ;
         
         //ball hits bottom
         if(ball.y +ball.height > HEIGHT) {
@@ -214,9 +224,19 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
         }
         //if it hits the top
         if (ball.y < 0) {
-            bally = 1;
+            bally = 1 ;
         }
-        
+        //ball hits right side player1 +1
+        if(ball.x + ball.width > WIDTH){
+            score1++;
+            resetBall();
+        }
+        //did ball hit left side
+        if (ball.x < 0){
+            //add to player2 score
+            score2++;
+            resetBall();
+        }
         
         
         
@@ -239,7 +259,17 @@ public class GameClassExamplePong extends JComponent implements ActionListener {
         }if (ball.intersects(paddle1)) {
             ballx =1;
         
+//        }if (ball.intersects(paddle1)){
+//            ballx = ballSpeed + 1;
+//        }if(ball.intersects(paddle2)){
+//            bally = ballSpeed + 1;
         }
+        
+        //DIID SOMEONE WIN?
+        if (score1 == 10 || score2 ==10){
+        gameTimer.stop();
+            System.out.println("GAME OVER");
+    }
     }
 
     // Used to implement any of the Mouse Actions
