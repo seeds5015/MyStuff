@@ -19,60 +19,35 @@ public class A5Q2 {
     public static void main(String[] args) {
         // TODO code application logic here
 // 
- Scanner input = new Scanner(System.in);
-        System.out.println("please enter the number of integers you will be ordering");      
-int [] number = new int [input.nextInt()];
-     
- 
- for (int i = 0; i< number.length; i++) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("please enter the number of integers you will be ordering");
+        int[] number = new int[input.nextInt()];
+
+        for (int i = 0; i < number.length; i++) {
             System.out.println("Please enter a positive integer ");
             number[i] = input.nextInt();
- 
- 
- } 
-  //keep track of the higest number and lowest
+
+        }
+        //keep track of the higest number and lowest
         int high = number[0];
         int low = number[0];
 
-
-        for (int i = 0; i< number.length; i++) {
+        for (int i = 0; i < number.length; i++) {
             System.out.println(" ");
-            
 
-         //make an if statment
+            //make an if statment
             if (number[i] < low && number[i] != -1) {
                 low = number[i];
-                
+
             }
             if (number[i] > high) {
                 high = number[i];
-                
+
             }
-        //state the final answer
+            //state the final answer
         }
         System.out.print(" The lowest number was " + low);
         System.out.println(" the highest number was " + high);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // int num = input.nextInt();
 // 
@@ -109,27 +84,6 @@ int [] number = new int [input.nextInt()];
 //// have you else statment state the other possible conditions 
 //        } else if (users2 > users1) {
 //            System.out.println("your biggest number is " + users2);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //         //make an if statment
 //        int high = number[0];
 //        int low = numbers0];
@@ -149,16 +103,6 @@ int [] number = new int [input.nextInt()];
 //        System.out.println("the highest number was " + high);
 //  
 //  
-  
-   }
-   
-    
-    
-    
-    
-    
-    
-    
     }
-    
 
+}

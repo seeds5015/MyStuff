@@ -18,62 +18,43 @@ public class A5Q4 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-  
-        
-        
-  int n, grade;      
+
+        int n, grade;
         Scanner s = new Scanner(System.in);
- 
-  
-  
-  System.out.println("Enter number of marks");
-  
-  
-  n = s.nextInt();
-  
-  int a [] = new int[10];
-  
+
+        System.out.println("Enter number of marks");
+
+        n = s.nextInt();
+
+        int a[] = new int[10];
+
         System.out.println("Enter all marks");
-  
-        for (int i = 0; i <  n; i++) 
-            {  
-                a[i]=s.nextInt();
-            }
-            for (int i = 0; i < n; i++) 
-                {
-        
-          
-            for (int j = i + 1; j < n; j++)
-            {
-            if (a[i] >a[j])
-            {
-                
-            grade = a[i];
-            a[i]=a[j];
-            a[j]= grade;
+
+        for (int i = 0; i < n; i++) {
+            a[i] = s.nextInt();
         }
-        }
-    
+        for (int i = 0; i < n; i++) {
+
+            for (int j = i + 1; j < n; j++) {
+                if (a[i] > a[j]) {
+
+                    grade = a[i];
+                    a[i] = a[j];
+                    a[j] = grade;
                 }
-            
-for (int i = 0; i < n -1; i++)
-{
-    System.out.println(a[i] + " , ");
-    
-    }
-System.out.println(a[n -1]);
-    
+            }
+
+        }
+
+        for (int i = 0; i < n - 1; i++) {
+            System.out.println(a[i] + " , ");
+
+        }
+        System.out.println(a[n - 1]);
+
     }
 }
 
-
-
- 
-  
-
-  
-  
-  
 //    int[] grades = new int[5];
 //    
 //   
@@ -107,6 +88,4 @@ System.out.println(a[n -1]);
 //    for (int i = 0; i < grades.length ; i++){
 //        System.out.println(grades[i=-1]);
 //}
-    
-        
 
