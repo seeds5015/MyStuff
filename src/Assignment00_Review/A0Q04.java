@@ -12,7 +12,7 @@ import java.util.Scanner;
  *
  * @author seeds5015
  */
-public class A0Q4 {
+public class A0Q04 {
 
     /**
      * @param args the command line arguments

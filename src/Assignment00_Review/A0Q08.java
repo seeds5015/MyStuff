@@ -10,21 +10,13 @@ package Assignment00_Review;
  *
  * @author seeds5015
  */
-public class A0Q5 {
+public class A0Q08 {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-   
-    
-    
-    
-    
-    
-    
-    
     }
     
 }

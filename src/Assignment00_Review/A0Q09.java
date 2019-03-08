@@ -10,7 +10,7 @@ package Assignment00_Review;
  *
  * @author seeds5015
  */
-public class A0Q9 {
+public class A0Q09 {
 
     /**
      * @param args the command line arguments
