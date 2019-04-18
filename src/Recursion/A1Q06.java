@@ -5,7 +5,6 @@
  */
 package Recursion;
 
-import static Recursion.A1Q03.count;
 import java.util.Scanner;
 
 /**
@@ -14,30 +13,29 @@ import java.util.Scanner;
  */
 public class A1Q06 {
 
-    private static int change(double num) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private static double changeX( String num) {
+       
+    
+    
+    
+
+  if ( num.length() == 0)
+    return 0;
+  
+
+  
+  if (num.charAt(0) == 'x')
+    return 1 + changeX(num.substring(1));
+    
+    return num.charAt(0) + changeX(num.substring(1));
     }
-    
-    
-        public String change(String N) {
-
-  // when to stop
-  if ( N.length() == 0){
-    return N;
-  }
-
-  // handle the "special case" using an assumption we can solve str.substring(1)
-  if (N.charAt(0) == 'x'){
-    return 'y' + change(N.substring(1));
-  }
-  // handle the "simple" case using an assumption we can solve str.substring(1)
-  return N.charAt(0) + change(N.substring(1));
-}
-
+ 
+ 
+ 
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] arg) {
         // TODO code application logic here
         
         Scanner scan = new Scanner(System.in);
@@ -45,17 +43,16 @@ public class A1Q06 {
         // stores the number outputted
             double num = scan.nextDouble();
         
-        int results;
+        double results;
      
-        
-      
-         results = change(num);
+         results = changeX(num);
         
          System.out.println("noX(" + num + ") = " + results);
         
         
         
     }
+
     
     
 

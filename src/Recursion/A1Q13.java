@@ -43,7 +43,7 @@ public class A1Q13 {
         
         double results = groupSum(num);
         
-         System.out.println("triangle(" + num + ") = " + results);
+         System.out.println("groupSum(" + num + ") = " + results);
         
     }
         // TODO code application logic here

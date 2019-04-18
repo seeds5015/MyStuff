@@ -14,30 +14,17 @@ import java.util.Scanner;
  */
 public class A1Q03 {
     
-     public static int count (int num) {
-        int count=0;
-        boolean doubl = false;
-        while(true) {
-            int n = num%10;
-            num = num/10;
+     public static int sumDigits(int num) {
+//     
 
-            if(n==8) {
-
-                if(doubl) {
-                    count = count+2;
-                } else {
-                    count++;
-                }
-                doubl=true;
-            }
-            else {
-                doubl=false;
-            }
-            if(num == 0) break;
-        }
-        return count;
+       if (num < 10)
+           return num;
+           return sumDigits(num/10)+ num%10;
+       }
         
-    }
+     
+        
+    
 
     /**
      * @param args the command line arguments
@@ -53,7 +40,7 @@ public class A1Q03 {
      
         
       
-         results = count(num);
+         results = sumDigits(num);
         
          System.out.println("sumDigit(" + num + ") = " + results);
         
@@ -80,7 +67,5 @@ public class A1Q03 {
 //        return 1;
 //     }
 
-    private static int num(int count) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+
 }
