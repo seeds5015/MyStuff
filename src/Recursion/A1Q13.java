@@ -13,6 +13,10 @@ import java.util.Scanner;
  * @author Samantha
  */
 public class A1Q13 {
+
+    private static double groupSum(int num) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     public boolean groupSum(int start, int[] nums, int tar) {
     if (start == nums.length) {

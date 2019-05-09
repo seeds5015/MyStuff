@@ -13,21 +13,21 @@ import java.util.Scanner;
  */
 public class A1Q06 {
 
-    private static double changeX( String num) {
+    public double changeX(String Str) {
        
     
     
     
 
-  if ( num.length() == 0)
+  if ( Str.length() == 0)
     return 0;
   
 
   
-  if (num.charAt(0) == 'x')
-    return 1 + changeX(num.substring(1));
+  if (Str.charAt(0) == 'x')
+    return 1 + changeX(Str.substring(1));
     
-    return num.charAt(0) + changeX(num.substring(1));
+    return changeX(Str.substring(1));
     }
  
  
@@ -35,23 +35,24 @@ public class A1Q06 {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] arg) {
+    public void main(String[] arg) {
         // TODO code application logic here
         
         Scanner scan = new Scanner(System.in);
            System.out.println("Please enter a value: ");
         // stores the number outputted
-            double num = scan.nextDouble();
+            double Str = scan.nextDouble();
         
         double results;
      
-         results = changeX(num);
+         results = changeX(Str);
         
-         System.out.println("noX(" + num + ") = " + results);
+         System.out.println("noX(" + Str + ") = " + results);
         
         
         
     }
+    
 
     
     

@@ -2,7 +2,7 @@
     * To change this license header, choose License Headers in Project Properties. 
     * To change this template file, choose Tools | Templates 
     * and open the template in the editor. 
-    */
+ */
 package file_reading;
 
 import java.io.File;
@@ -41,7 +41,7 @@ public class Library {
         // no book found 
         return null;
     }
-     
+    
     public LibraryMember findMember(String name) {
         // enhanced for loop 
         for (LibraryMember m : this.members) {
@@ -52,16 +52,16 @@ public class Library {
         }
         // no member found 
         return null;
-        
+    
     }
-
+    
     public void checkoutBook(Book aBook, LibraryMember member) {
         if (!member.hasABook() && !aBook.isOnLoan()) {
             aBook.checkout();
             member.borrowBook(aBook);
         }
     }
-
+    
     public void loadMembers(String filename) {
         // load members in from a file 
         try {
@@ -73,9 +73,9 @@ public class Library {
                 String onLoan = input.nextLine();
                 // add the member 
                 addMember(name, address);
-
+    
                 if (!onLoan.equals("NONE")) {
-
+    
                 }
             }
         } catch (FileNotFoundException e) {
